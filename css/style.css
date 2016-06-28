@@ -1,0 +1,384 @@
+@font-face {
+    font-family: 'gobold';
+    src: url('../fonts/gobold_light-webfont.eot');
+    src: url('../fonts/gobold_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/gobold_light-webfont.woff2') format('woff2'),
+         url('../fonts/gobold_light-webfont.woff') format('woff'),
+         url('../fonts/gobold_light-webfont.ttf') format('truetype'),
+         url('../fonts/gobold_light-webfont.svg#gobold_thin_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*, *:before, *:after {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+	outline: none;
+}
+html {
+ 	box-sizing: border-box;
+ 	position: relative;
+ 	min-height: 100%;
+}
+html, body {
+	margin: 0;
+	padding: 0;
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+body {
+	font-family: 'gobold';
+	font-size: 0.9rem;
+	text-transform: uppercase;
+	background-color: #fff;
+	letter-spacing: 2px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+}
+a:hover {
+	color: #05d8f7;
+}
+
+ul li, li {
+	list-style: none;
+}
+
+
+
+
+#logo {
+	margin: 25px 25px 75px 25px;
+	width: 70%;
+	width: calc(100% - 50px);
+	max-width: 160px;
+}
+
+#logo-mobile {
+	display: none;
+	width: 135px;
+	height: 44px;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -68px;
+}
+
+#menu-bar {
+	display: none;
+}
+
+.scrollTop {
+	position: absolute;
+	bottom: 25px;
+	left: 25px;
+}
+
+
+.menu-primary-container .menu li.current-menu-item {
+	border-bottom: 1px solid #000;
+} 
+
+.bottom-menu {
+	margin-top: 50px;
+}
+
+.page-name {
+	display: none;
+}
+
+
+@media screen and (max-width: 800px) {
+	#mobile-menu {
+		position: absolute;
+		width: 100%;
+		top: 0;
+		height: 44px;
+		border-bottom: 1px solid #000;
+		background-color: #fff;
+		z-index: 9999;
+	}
+
+	#logo {
+		display: none;
+	}
+	#logo-mobile {
+		display: block;
+	}
+	#menu-bar {
+		width: 44px;
+		height: 44px;
+		cursor: pointer;
+		display: block;
+		position: absolute;
+		left: 0;
+		top: 0;
+		background-image: url('../images/icon-drawer.png');
+		background-size: 100%;
+	}
+
+	.navbar-container a.scrollTop {
+		display: none;
+	}
+
+	.page-name {
+		position: absolute;
+		display: block;
+		right: 7px;
+		top: 0;
+		line-height: 44px;
+	}
+}
+
+
+
+
+
+.navbar-container {
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 17%;
+	height: 100%;
+	background-color: #fff;
+}
+
+.navbar-container ul li {
+	margin: 25px 25px 0 25px;
+}
+
+.navbar-container a {
+	display: block;
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+	.nav--next,
+	.nav--prev {
+		display: none;
+	}
+
+	.menu-primary-container {
+		position: absolute;
+		background-color: #ccc;
+		z-index: 1000;
+		top: 44px;
+		width: 100%;
+		max-height: 300px;
+		overflow-y: scroll;
+		border-bottom: 1px solid #000;
+		padding: 30px 20px 5px 20px;
+		text-align: left;
+		font-size: 0;
+		-webkit-transform: translateY(-100%);
+		-moz-transform: translateY(-100%);
+		transform: translateY(-100%);
+		-webkit-transition: all 350ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		-moz-transition: all 350ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+		transition: all 350ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+	}
+
+	.menu-primary-container.nav-expanded {
+		-webkit-transform: translateY(0);
+		-moz-transform: translateY(0);
+		transform: translateY(0);
+		background-color: #fff;
+	}
+
+	.navbar-container {
+		width: 100%;
+		height: 44px;
+		text-align: center;
+		z-index: 1000;
+		overflow: visible;
+	}
+	.navbar-container ul li {
+	    font-size: 1rem;
+		text-align: left;
+	    margin: 0;
+		width: 50%;
+		display: inline-block;
+	}
+	.bottom-menu {
+		margin-top: 0;
+		padding-top: 25px;
+		border-top: 1px solid #000;
+	}
+	.navbar-container .top-menu li,
+	.navbar-container .bottom-menu li{
+		width: 50%;
+		margin-bottom: 25px;
+	}
+	.menu-primary-container .menu li.current-menu-item {
+		border-bottom: none;
+	}
+	.menu-primary-container .menu li.current-menu-item a {
+		color: #05d8f7;
+	}
+	.photoGrid {
+		margin-top: 44px;
+	}
+
+}
+
+
+
+.about {
+	margin-left: 17%;
+	padding: 3rem 10%;
+}
+
+.about img {
+	width: 100%;
+	height: auto;
+}
+
+.about p {
+	text-align: center;
+    margin: 20px;
+	line-height: 1.4rem;
+}
+@media screen and (max-width: 800px) {
+	.about {
+		margin-top: 44px;
+		margin-left: 0;
+		padding: 0;
+	}
+}
+
+
+
+
+
+
+/* video.php */
+
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.video-wrapper {
+	padding: 3rem 3rem 0 3rem;
+	margin-left: 17%;
+}
+
+.video-wrapper hr {
+	margin: 1rem 0 6rem 0;
+	border: none;
+	border-bottom: 1px solid #000;
+}
+
+.vimeoVid {
+	padding-top: 1rem;
+	font-size: 0;
+	text-align: left;
+	position: relative;
+}
+
+.vimeoVid .web-title {
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+	display: inline-block;
+	width: 85%;
+	vertical-align: top;
+}
+.vimeoVid.show .web-title {
+	width: 40%;
+	margin-left: 4%;
+}
+
+.vimeoVid .mobile-title {
+	display: none;
+}
+
+
+
+.vimeoVid .vimeoDescription {
+	vertical-align: top;
+	width: 15%;
+	display: inline-block;
+	text-align: right;
+}
+
+.vimeoVid .desc {
+	display: none;
+	text-transform: none;
+	line-height: 1.4rem;
+	font-size: 0.8rem;
+	text-align: justify;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.vimeoVid.show .desc {
+	display: inline-block;
+	width: 56%;
+	max-width: 600px;
+}
+
+.vimeoVid .desc p {
+	margin-bottom: 1.3rem;
+}
+
+
+.showMore {
+	position: absolute;
+	bottom: 2px;
+	right: 0;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+
+@media screen and (max-width: 800px) {
+	.video-wrapper {
+		margin-left: 0;
+		padding: 44px 0 0 0;
+	}
+
+	.vimeoVid .mobile-title {
+		display: block;
+		width: auto;
+		margin: 0 13px 26px 13px;
+		font-size: 1rem;
+	}
+
+	.showMore {
+		position: static;
+		font-size: 0.8rem;
+		display: block;
+		text-align: center;
+	}
+
+	.vimeoVid .web-title {
+		display: none;
+	}
+
+	.vimeoVid.show .desc {
+		text-align: left;
+		display: block;
+		margin: 12px;
+		width: auto;
+		font-size: 0.7rem;
+	}
+
+	.video-wrapper hr {
+		margin: 1rem 13px 26px 13px;
+		border: none;
+		border-bottom: 1px solid #000;
+	}
+}
